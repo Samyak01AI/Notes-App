@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/wallpaper"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_marginTop="24dp"
+        android:id="@+id/image"
+        android:src="@drawable/ic_android_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_below="@id/image"
+        android:id="@+id/layoutEmail"
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:hint="Enter Email"
+            android:layout_margin="20dp"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:lines="1"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/layoutEmail"
+        android:id="@+id/layoutPassword"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:layout_margin="20dp"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/layoutPassword"
+        android:id="@+id/btnLogin"
+        android:layout_margin="50dp"
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:text="Create an Account?"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvForgot"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:text="Forgot Password?"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
